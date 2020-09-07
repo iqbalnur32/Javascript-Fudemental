@@ -28,3 +28,19 @@ class Buah {
 }
 
 var buah1 = new Buah("Mangga", '20000'); console.log(buah1)
+
+// Encapluption
+function Rumah(harga) {
+	var pajak = 1000
+	var biaya = function() {
+		return harga * 100
+	}
+
+	this.totalBiaya = function () {
+		return biaya() + pajak
+	}
+}
+
+const rumah1 = new Rumah(100000000); 
+rumah1.pajak = 200; // data tidak akan berubah karean data pajak di definisikan sebagai private funtion buka global function(this)
+console.log(rumah1.totalBiaya())
