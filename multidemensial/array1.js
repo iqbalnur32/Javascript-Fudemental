@@ -21,3 +21,22 @@ for(let i = 0; i < negara.length; i++){
 	}
 }
 console.log(count)
+
+/*
+	Study Kasus Mencari Negara Dengan Huruf Depan C
+*/
+function countNegara(result, charachter){
+	let count = 0;
+	for (let i = 0; i < result.length; i++) {
+		for (let j = 0; j < result[i].length; j++) {
+			let negara = result[i][j]
+			if (negara[0] === charachter) {
+				count++
+			}
+		}
+	}
+	return count++
+}
+
+console.log(countNegara(negara, 'C'));
+
